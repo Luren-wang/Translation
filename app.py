@@ -15,9 +15,9 @@ if API_KEY:
 # 定義模型池，利用輪詢 (Round Robin) 分散請求壓力
 # 這些模型的免費額度通常是獨立計算或有不同的限制
 MODELS_TO_USE = [
-    "gemini-1.5-flash",      # 速度最快，額度高
-    "gemini-1.5-flash-8b",   # 更輕量，適合簡單翻譯
-    "gemini-2.0-flash-exp"   # 新版模型，推理能力較強
+    "models/gemini-2.0-flash", 
+    "models/gemini-1.5-flash", 
+    "models/gemini-1.5-flash-8b"
 ]
 model_pool = cycle(MODELS_TO_USE)
 
